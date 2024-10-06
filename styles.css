@@ -1,0 +1,329 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Añadimos esta regla para la parte que deseas que sea sticky */
+.intro {
+    position: -webkit-sticky; /* Para compatibilidad con navegadores más antiguos */
+    position: sticky;
+    top: 10px; /* Define la distancia del contenedor al hacer scroll desde la parte superior */
+    width: 40%;
+    text-align: left;
+    margin-bottom: 20px;
+    z-index: 10; /* Asegura que esté sobre otros elementos */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    width: 40%;
+    text-align: left;
+    margin-bottom: 20px;
+    position: sticky; /* Sección sticky */
+    top: 10px;
+    z-index: 10; /* Para asegurar que esté sobre otros elementos */
+}
+
+.intro h1 {
+    font-size: 3.5rem; /* Ajuste para evitar desbordamiento */
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+#first-name, #last-name {
+    display: inline-block;
+    white-space: pre;
+    overflow: hidden;
+    color: #ccd6f6;
+    font-size: 3.5rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* Cursor efecto */
+    animation: blink 0.7s steps(1) infinite;
+    transition: color 1s ease-in-out;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.changed-color {
+    color: #64ffda; /* Cambia el color al terminar la animación */
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #8892b0;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Sección de redes sociales */
+.social-links {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #8892b0;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #64ffda;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #64ffda;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffdf64;
+}
+
+/* Secciones de contenido a la derecha */
+.content {
+    width: 55%;
+    margin-left: auto;
+    text-align: left;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #ccd6f6;
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #8892b0;
+    line-height: 1.6;
+}
+
+/* Estilos para la galería de fotos */
+.photo-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 10% auto;
+    display: block;
+    max-width: 50%; /* Tamaño moderado de la imagen */
+    max-height: 50%; /* Limitar la altura también */
+    border-radius: 10px;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #0a192f;
+    color: #8892b0;
+    font-size: 0.9rem;
+}
+
+.highlight {
+    color: #64ffda;
+    font-weight: bold;
+}
+
+/* Estilos generales de la sección Tech Stack */
+#tech-stack {
+    margin: 50px 0;
+}
+
+.tech-stack h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ccd6f6;
+}
+
+.stack-category {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stack-category img {
+    margin: 10px;
+    height: 40px; /* Tamaño moderado para los íconos */
+}
+
+.container.tech-stack {
+    width: 80%;
+    margin: auto;
+}
+
+/* Estilos generales para la sección de proyectos */
+.projects-section {
+    margin: 50px 0;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ccd6f6;
+    font-size: 2rem;
+}
+
+/* Contenedor de los proyectos */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos para las tarjetas de los proyectos */
+.project-card {
+    width: 30%;
+    background-color: #112240;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de cada proyecto */
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Información del proyecto */
+.project-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.project-info h3 {
+    color: #ccd6f6;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #8892b0;
+    margin-bottom: 20px;
+}
+
+/* Icono de GitHub */
+.github-icon {
+    display: inline-block;
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.github-icon i {
+    margin-right: 8px;
+}
+
+.github-icon:hover {
+    color: #64ffda;
+}
+
+
